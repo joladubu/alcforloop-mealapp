@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+header{
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+header h3{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    flex: 1 1 0%;
+    color: #FF0000;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+header div {
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header div span {
+    padding: 8px 16px;
+    cursor: pointer;
+    max-width: 100%;
+    font: 400 13.3333px Arial;
+    flex-grow: 1;
+}
+
+header div a {
+    display: block;
+    cursor: pointer;
+    text-decoration: inherit;
+    border-radius: 32px;
+    background-color: #ff0000;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 24px;
+    flex-grow: 1;
+    font: 400 13.3333px Arial;
+}
+
+
+#main-section {
+    /* background-image: url('../image/chop.png'); */
+    background-size: cover;
+    min-height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main-section img {
+     margin-top: 4%;
+     width: 100%;
+     min-height: 20vh;
+}
+
+#main-section h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #4d4d4d;
+}
+
+#main-section a {
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: inherit;
+    border-radius: 32px;
+    background-color: #ff0000;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-weight: 500;
+    width: 100%;
+    line-height: 56px;
+    font-size: 1.5rem;
+}
+
+.cta {
+    padding: 3% 0;
+}
+
+
+#hiw {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#hiw h2 {
+    color: #4a4a4a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.125;
+    border-bottom: 2px solid #ff0000;
+
+
+}
+
+#hiw div {
+    display: flex;
+    justify-content:space-around;
+}
+
+#hiw div h3 {
+    color: #4a4a4a;
+}
+
+
