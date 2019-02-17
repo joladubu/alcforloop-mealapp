@@ -1,9 +1,10 @@
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
 const PORT = 9001;
 
+// adding app routes/endpoints
 app.get('/', (req, res) => {
   return res.send('The API is working');
 });

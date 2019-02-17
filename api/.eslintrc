@@ -1,4 +1,6 @@
-// extending airbnb-base config
-{
-    "extends": "airbnb-base"
- }
+`{
+    "extends": "airbnb-base",
+    "env": {
+        "mocha": true
+    }
+ }`
