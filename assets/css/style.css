@@ -141,8 +141,25 @@ header div a {
 .meal-day-section {
     padding-top: 3%;
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
+}
 
+.food-selection {
+  padding-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.food-select h1 {
+  font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #4d4d4d;
+    display: flex;
+    justify-content: center;
 }
 
 .card {
@@ -173,7 +190,11 @@ header div a {
     color: #4a4a4a;
 }
 
-#order {
+.order {
+    margin: 0 auto;
+}
+
+.orderMeal {
     display: block;
     cursor: pointer;
     text-decoration: inherit;
@@ -203,6 +224,18 @@ header div a {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 
+  .hide {
+    display: none;
+  }
+
+  .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 4;
+  }
+
   /* Modal Content */
   .modal-content {
     position: relative;
@@ -217,6 +250,36 @@ header div a {
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+  }
+
+  .mode {
+    /*display: none; /*Hidden by default*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  .register-content {
+    position: fixed;
+    background-color: rgba(0,0,0,.6);
+    margin-left: 30vw;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
   }
 
   /* Add Animation */
@@ -304,6 +367,24 @@ header div a {
     font: 400 13.3333px Arial;
   }
 
+  .food-select {
+    background: #f0f0f0;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    /* border: 5px solid #2980b9; */
+
+  }
+
+  /* .food-select a span {
+    display: flex;
+    justify-content: center;
+    color: #ff0000;
+    margin: 0 auto;
+
+  } */
+
   footer {
     background: #4a4a4a;
     width: 100%;
@@ -313,6 +394,7 @@ header div a {
     margin-top: 5%;
     color: #fff;
 }
+
 
 
 @media only screen and (max-width: 600px) {
