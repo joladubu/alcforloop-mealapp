@@ -1,0 +1,4 @@
+// extending airbnb-base config
+{
+    "extends": "airbnb-base"
+ }
