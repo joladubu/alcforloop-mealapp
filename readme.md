@@ -1,2 +1,6 @@
 Book-a-meal
-Meal Booking Web Application
+#Meal Booking Application
+
+#SETUP
+
+#INSTALLATION INSTRUCTIONS
