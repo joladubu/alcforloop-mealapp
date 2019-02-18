@@ -1,9 +1,9 @@
 class Meal {
   constructor() {
-    this.id = id;
-    this.name = name;
-    this.size = size;
-    this.price = price;
+    this.id = null;
+    this.name = null;
+    this.size = null;
+    this.price = null;
   }
 }
 
