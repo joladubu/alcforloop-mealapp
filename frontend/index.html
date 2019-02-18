@@ -4,40 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Meals & U</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
         <h3>Meals & U</h3>
         <div>
-            <span id="signIn">Sign In</span>
-            <a href="" id="signUp">Sign Up</a>
+            <a><span id="signIn">Login</span></a>
+            <span>View Cart</span>
         </div>
     </header>
+
+    <div id="myModal" class="modal">
+
+        <!-- Login Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            </div>
+            <form action="#" method="post" class="page_form" id="loginForm">
+                <div class="form-group">
+                    <input type="email" name="email" class="form-field" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-field" placeholder="Your Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="modal-footer">
+                <p class="page_link">No Account? <a href="register.html">Register</a></p>
+            </div>
+        </div>
+
+    </div>
     <section id="main-section">
         <img src="./assets/image/chop.png" alt="">
         <div class="cta">
             <h1>We Cook & Deliver the meals you love</h1>
-            <a href="">Get Started</a>
+            <a href="#main">Get Started</a>
         </div>
     </section>
 
 
     <section id="hiw">
         <h2>How it Works</h2>
-        <div>
-            <img src="./assets/image/hiw1.svg" alt="">
-            <img src="./assets/image/hiw2.svg" alt="">
-            <img src="./assets/image/hiw3.svg" alt="">
+        <div id="main">
+            <figure>
+                <img src="./assets/image/hiw1.svg" alt="">
+                <h3>Order a Meal</h3>
+            </figure>
+            <figure>
+                <img src="./assets/image/hiw2.svg" alt="">
+                <h3>Receive Meal Delivery</h3>
+            </figure>
+            <figure>
+                <img src="./assets/image/hiw3.svg" alt="">
+                <h3>Enjoy your Order</h3>
+            </figure>
+    </section>
+
+    <div class="overlay hide"></div>
+    <section class="meal-day">
+        <h2>Today's Meal</h2>
+        <div class="meal-day-section">
+            <div class="card">
+                <img src="./assets/image/pizza.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Pizza</b></h4>
+                    <p>NGN3,500</p>
+                    <a href="/cart.html" class="orderMeal">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/image/jchiken.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Rice & Chicken</b></h4>
+                    <p>NGN1,500</p>
+                    <a href="/cart.html" class="orderMeal">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/image/burger.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Buristos</b></h4>
+                    <p>NGN800</p>
+                    <a href="/cart.html" class="orderMeal">Order Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/image/pizza.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Shawarma</b></h4>
+                    <p>NGN4000</p>
+                    <a href="/cart.html" class="orderMeal">Order Now</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <h3>Order a Meal</h3>
-            <h3>Receive Meal Delivery</h3>
-            <h3>Enjoy your Order</h3>
+        <div class="food-select">
+            <a href="food-select.html"><h1>View Our Sumptous Food Selection >>></h1></a>
         </div>
 
-    </section> -->
-    <!-- <p class="sansserif">&#8801; Menu </p> -->
+    </section>
+    <footer>&copy 2019 Meals & U</footer>
+    <script src="./assets/js/srcipt.js"></script>
 </body>
 </html>
