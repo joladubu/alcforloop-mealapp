@@ -1,8 +1,11 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 
 const app = express();
 
 const PORT = 9001;
+
+app.use(bodyParser.json());
 
 // adding app routes/endpoints
 app.get('/', (req, res) => {
