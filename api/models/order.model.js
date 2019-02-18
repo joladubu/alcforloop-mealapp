@@ -1,9 +1,12 @@
-class Order {
-  constructor(customer, order, total) {
-    this.customer = customer;
-    this.order = order;
-    this.total = total;
+class Orders {
+    constructor() {
+      this.orderId = null;
+      this.customerName = null;
+      this.mealName = null;
+      this.quantity = null;
+      this.price = null;
+      this.status=null;
+    }
   }
-}
 
-export default Order;
+export default Orders;
