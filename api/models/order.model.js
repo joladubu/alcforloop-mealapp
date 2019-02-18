@@ -1,8 +1,8 @@
 class Order {
-    constructor(customer, order, total) {
-      this.customer = customer;
-      this.order = order;
-      this.total = total;
+    constructor() {
+      this.customer = null;
+      this.order = null;
+      this.total = null;
     }
   }
 
