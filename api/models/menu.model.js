@@ -1,8 +1,9 @@
 class Menu {
-    constructor(caterer, meals) {
-      this.caterer = caterer;
-      this.meals = meals;
-    }
+  constructor() {
+    this.day = null;
+    this.caterer = null;
+    this.meals = null;
   }
+}
 
-  export default Menu;
+export default Menu;
