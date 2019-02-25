@@ -1,13 +1,17 @@
 language: node_js
 node_js:
   - "stable"
+env:
+  - CODECLIMATE_REPO_TOKEN=801645cdf755426e8d793a43bcf378c1a9483052c4f5421eb1fc5b7eea5a9d50
 cache:
   directories:
     - "/api/node_modules"
+    - "/frontend/node_modules"
+before_install: cd api/
 script:
   - "npm run test"
 after_success:
-- npm run coveralls
+- npm run coverage
 - npm run coveralls
 - npm run report-coverage
 - ./node_modules/.bin/mocha
