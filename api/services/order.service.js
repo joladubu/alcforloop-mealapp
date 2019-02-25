@@ -1,6 +1,6 @@
 import dummyOrder from '../utils/dummyOrder';
 
-import Orders from '../models/order.model'
+import Orders from '../models/order.model';
 
 const OrderService = {
     getAllOrders() {

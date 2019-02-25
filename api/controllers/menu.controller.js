@@ -1,4 +1,5 @@
-import MealService from '../services/meal.service';
+import MenuService from '../services/menu.service';
+
 const MenuController = {
     getMenu(req, res) {
         const dayMenu = MenuService.getMenu();
