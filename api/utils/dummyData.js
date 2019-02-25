@@ -8,7 +8,7 @@ export default {
         },
         {
             id: 2,
-            name: 'JOllof Rice',
+            name: 'Jollof Rice',
             size: 'Large',
             price: '550'
         },
