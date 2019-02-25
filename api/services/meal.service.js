@@ -35,7 +35,7 @@ const MealService = {
     mealToUpdate.price = meal.price;
     mealToUpdate.size = meal.size;
     dummyData.meals[meal.id] = mealToUpdate;
-    return mealToUpdate
+    return mealToUpdate;
   }
 
 };
