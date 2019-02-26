@@ -1,4 +1,5 @@
 Book-a-Meal
+[![Build Status](https://travis-ci.org/joladubu/alcforloop-mealapp.svg?branch=master)](https://travis-ci.org/joladubu/alcforloop-mealapp)
 
 Web App bulit to connect Users for food ordeing to Caterers 
 
