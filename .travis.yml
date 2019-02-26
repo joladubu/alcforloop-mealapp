@@ -3,7 +3,7 @@ node_js:
   - "stable"
 env:
   global:
-  - CODECLIMATE_REPO_TOKEN=57319f15294ee1d2c9d30a232c96f18ce6effc3a4342b15b938f009263977652
+  - CODECLIMATE_REPO_TOKEN=ba0c0cc5dd583bdd9c8aaa5f8f3ef0f482b9c316a386ded68ddd8da424c2537a
 cache:
   directories:
     - "node_modules"
@@ -11,10 +11,6 @@ before_install: cd ./api
 install: 
   - npm install
 script:
-<<<<<<< HEAD
-  - npm run test
-=======
   - npm run test
 after_success: 
   - npm run coverage
->>>>>>> 76f4cda71caf684121af42f9b72170fea3dbeecf
