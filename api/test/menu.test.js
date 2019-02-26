@@ -4,7 +4,7 @@ import app from '../index';
 
 chai.use(chaiHttp);
 
-const { expect } = chai;
+chai.should();
 
 describe('GET /', () => {
   it('should get all available menu', (done) => {
@@ -12,10 +12,9 @@ describe('GET /', () => {
       .get('/api/v1/menu')
       .end((err, res) => {
         const { data } = res.body;
-        console.log(res.body, '<=====');
-        expect(res).to.have.status(200);
-        expect(res).to.be.an('object');
-        expect(data).to.be.an('Array');
+        res.should.have.status(200);
+        res.should.be.an('object');
+        data.should.be.an('Array');
         done();
       });
   });
@@ -52,12 +51,11 @@ describe('POST /', () => {
       .send(newMenu)
       .end((err, res) => {
         const { data } = res.body;
-        console.log(res.body, '<=====');
-        expect(res).to.have.status(200);
-        expect(data).to.be.an('object');
-        expect(newMenu.meals).to.be.an('Array');
-        expect(newMenu.day).to.equal(data.day);
-        expect(newMenu.category).to.equal(data.category);
+        res.should.have.status(200);
+        data.should.be.an('object');
+        newMenu.meals.should.be.an('Array');
+        newMenu.day.should.equal(data.day);
+        newMenu.category.should.equal(data.category);
         done();
       });
   });

@@ -3,19 +3,17 @@ import chaiHttp from 'chai-http';
 import app from '../index';
 
 chai.use(chaiHttp);
-// let should = chai.should();
-const { expect } = chai;
+chai.should();
 
 describe('GET /', () => {
   it('should return all meals', (done) => {
     chai.request(app)
       .get('/api/v1/meals')
       .end((err, res) => {
-        const { data } = res.body;
-        expect(res).to.have.status(200);
-        expect(res).to.be.an('object');
-        expect(data).to.be.an('Array');
-        expect(data.length).to.equal(4);
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.a('object');
+        res.body.data.should.be.a('array');
         done();
       });
   });
@@ -27,9 +25,9 @@ describe('GET /:id', () => {
       .get('/api/v1/meals/2')
       .end((err, res) => {
         const { data } = res.body;
-        expect(data.name).to.equal('Jollof Rice');
-        expect(data.size).to.equal('Large');
-        expect(data.price).to.equal('550');
+        data.name.should.equal('Jollof Rice');
+        data.size.should.equal('Large');
+        data.price.should.equal('550');
         done();
       });
   });
@@ -45,11 +43,11 @@ describe('POST /', () => {
       .send(newPost)
       .end((err, res) => {
         const { data } = res.body;
-        expect(res).to.have.status(200);
-        expect(newPost.id).to.equal(data.id);
-        expect(newPost.name).to.equal(data.name);
-        expect(newPost.size).to.equal(data.size);
-        expect(newPost.price).to.equal(data.price);
+        res.should.have.status(200);
+        newPost.id.should.equal(data.id);
+        newPost.name.should.equal(data.name);
+        newPost.size.should.equal(data.size);
+        newPost.price.should.equal(data.price);
         done();
       });
   });
@@ -65,11 +63,11 @@ describe('PUT /:id', () => {
       .send(newUpdate)
       .end((err, res) => {
         const { data } = res.body;
-        expect(res).to.have.status(200);
-        expect(newUpdate.id).to.equal(data.id);
-        expect(newUpdate.name).to.equal(data.name);
-        expect(newUpdate.size).to.equal(data.size);
-        expect(newUpdate.price).to.equal(data.price);
+        res.should.have.status(200);
+        newUpdate.id.should.equal(data.id);
+        newUpdate.name.should.equal(data.name);
+        newUpdate.size.should.equal(data.size);
+        newUpdate.price.should.equal(data.price);
         done();
       });
   });
