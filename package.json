@@ -7,7 +7,7 @@
     "start": "nodemon --exec babel-node api/index.js",
     "dev": "nodemon --exec babel-node api/index.js",
     "build": "babel -d ./build ./api -s",
-    "test": "mocha --require @babel/register api/test/*.js --exit",
+    "test": "nyc mocha -r esm api/test/*.js --exit",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
