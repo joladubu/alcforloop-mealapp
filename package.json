@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node api/index.js",
+    "start": "node build/index.js",
     "dev": "nodemon --exec babel-node api/index.js",
     "build": "babel -d ./build ./api -s",
-    "test": "mocha --require @babel/register api/test/*.js --exit",
+    "test": "nyc mocha -r esm api/test/*.js -- exit",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
@@ -27,12 +27,15 @@
     "dotenv": "^6.2.0",
     "pg": "^7.8.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.42.0",
-    "@babel/core": "^7.3.3",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.1"
+    "sequelize": "^4.42.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "coveralls": "^3.0.3",
@@ -45,9 +48,10 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
     "istanbul": "^0.4.5",
-    "mocha-lcov-reporter": "^1.3.0",
     "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.18.10",
+    "nyc": "^13.3.0",
     "prettier": "^1.16.4"
   }
 }
